@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Container from "./Container";
 // import logo from '/logo.svg';
 // import '/App.css';
 
@@ -8,8 +9,9 @@ import Footer from "./Footer";
 function App() {
   return (
     <div>
-    <Header />
-    <Footer />
+      <Header />
+      <Container />
+      <Footer />
     </div>
   );
 }
