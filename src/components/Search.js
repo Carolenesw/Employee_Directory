@@ -6,8 +6,9 @@ function Search(props) {
       <div>
         <div
           className="form-group"
-          style={{ width: "25%", margin: "auto", marginTop: "10px" }}>
-        
+          style={{ width: "25%", margin: "auto", marginTop: "10px" }}
+        >
+          <p>Enter Employee's name</p>
           <input
             onChange={props.handleInputChange}
             value={props.value}
@@ -17,12 +18,13 @@ function Search(props) {
             placeholder="John Brown"
             id="search"
           />
-          <br />
+          <button className="btn my-2 my-sm-0" type="submit">
+            Search
+          </button>
         </div>
       </div>
     </form>
   );
 }
-
 
 export default Search;
