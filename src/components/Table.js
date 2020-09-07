@@ -1,7 +1,7 @@
 import React from "react";
 // create table property to capture employee data
 
-function empTable (props) {
+function Table (props) {
 return (
     <table class="table table-striped">
         <thead>
@@ -29,4 +29,4 @@ return (
     </table>
     );
 }
-export default empTable;
+export default Table;
