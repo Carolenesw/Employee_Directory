@@ -2,35 +2,29 @@ import React, { Component } from "react";
 import Table from "../components/Table";
 import api from "../utils/api";
 
+// extends DataReturn to get data from api call
 class DataReturn extends Component {
   state = {
-    search: "",
-    results: []
+    response: []
   };
 
-  // When this component mounts, search the Giphy API for employee image
+  // When this component mounts, search the API for employee
   componentDidMount() {
     api.userSearch()
-      .then(res => this.setState({ results: res.data.results}))
+    
+      .then(res =>  {
+        console.log("resp:", res)
+          this.setState({ response: res.data.results})})
+        
       .catch(err => console.log(err));
-  };
-
-
-  handleInputChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value
-    });
+   
   };
 
   render() {
     return (
       <div>
-        <Table 
-          empResults = {this.state.results} >
-        </Table>
-      </div>
+        <Table response = {this.state.response} />   
+     </div>
     
     );
   }
