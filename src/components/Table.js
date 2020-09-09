@@ -1,6 +1,6 @@
 import React from "react";
-// create table property to capture employee data
 
+// create table property to capture employee data
 function Table (props) {
 return (
     <table class="table table-striped">
@@ -14,7 +14,10 @@ return (
         </tr>
         </thead>
         <tbody>
-            {props.results.map(result => (
+        {/* create a new array to capture employee data 
+        use ternary operator to catch error 
+        */}
+            {props.response? props.response.map(result => (
             
             <tr>
                 <td><img alt = "" src = {result.picture.medium} className = "image" /></td>
@@ -24,7 +27,8 @@ return (
                 <td> {result.dob.date} </td>
             </tr>
 
-        ))}
+        )):(<p>Loading, please wait...</p>) /*send message if api calls fails*/
+        }
         </tbody>
     </table>
     );
