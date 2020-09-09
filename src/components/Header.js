@@ -1,13 +1,18 @@
 import React from "react";
 import Search from "./Search";
 
-function Header() {
-return <header>
-    <h1 className="header">Employee Directory</h1>
-    <Search />
-</header>
-
+function Header(props) {
+  return (
+    <div>
+      <header>
+        <h1 className="header">Employee Directory</h1>
+      </header>
+      <Search
+        // handle user input
+        handleInput={props.handleInput}
+      />
+    </div>
+  );
 }
-
 
 export default Header;
