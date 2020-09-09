@@ -10,7 +10,7 @@ function Search(props) {
         >
           <p>Enter Employee's name</p>
           <input
-            onChange={props.handleInputChange}
+            onChange={props.handleInput}
             value={props.value}
             name="search"
             type="text"
