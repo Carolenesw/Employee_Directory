@@ -18,8 +18,8 @@ return (
         use ternary operator to catch error 
         */}
             {props.response? props.response.map(result => (
-            
-            <tr>
+           
+            <tr key={result.id.value}>
                 <td><img alt = "" src = {result.picture.medium} className = "image" /></td>
                 <td> {result.name.first +  " " + result.name.last} </td>
                 <td> {result.phone} </td>
