@@ -3,7 +3,7 @@ import React from "react";
 // create table property to capture employee data
 function Table (props) {
 return (
-    <table class="table table-striped">
+    <table className="table table-striped">
         <thead>
         <tr>
             <th scope="col">Image</th>
