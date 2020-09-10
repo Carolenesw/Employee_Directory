@@ -10,7 +10,7 @@ return (
             <th scope="col">Name</th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
-            <th scope="col">DOB</th>
+            <th scope="col">AGE</th>
         </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@ return (
                 <td> {result.name.first +  " " + result.name.last} </td>
                 <td> {result.phone} </td>
                 <td> {result.email}</td>
-                <td> {result.dob.date} </td>
+                <td> {result.dob.age} </td>
             </tr>
 
         )):(<p>Loading, please wait...</p>) /*send message if api calls fails*/

@@ -8,6 +8,7 @@ class DataReturn extends Component {
     response: []
   };
 
+  
   // When this component mounts, search the API for employee
   componentDidMount() {
     api.userSearch()
@@ -20,10 +21,13 @@ class DataReturn extends Component {
    
   };
 
+
   render() {
     return (
       <div>
-        <Table response = {this.state.response} />   
+        <Table response = {this.state.response} 
+
+        />   
      </div>
     
     );

@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Container from "./Container";
 import DataReturn from "./DataReturn";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import logo from '/logo.svg';
 // import '/App.css';
 
