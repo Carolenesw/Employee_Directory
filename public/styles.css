@@ -27,12 +27,14 @@ footer {
   height: 150px;
   clear: both;
   padding-top: 20px;
+  
 }
 
 footer p {
   color: #fff;
   background: #b8b8b8;
   padding: 5px;
+  font-family: "McLaren", cursive;
 }
 footer span {
   color: #fff;
