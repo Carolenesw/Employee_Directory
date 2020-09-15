@@ -46,13 +46,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header handleInput={this.handleInputChange} />
+        <Header 
+        handleInput={this.handleInputChange.bind(this)} 
+        handleFormSubmit={this.handleFormSubmit.bind(this)}
+        />
         {/* <p>{this.state.search}</p> */}
         <Container>
           <DataReturn
             search={this.state.search}
-            handleFormSubmit={this.handleFormSubmit.bind(this)}
-            handleInputChange={this.handleInputChange.bind(this)}
+            // handleFormSubmit={this.handleFormSubmit.bind(this)}
+            // handleInputChange={this.handleInputChange.bind(this)}
           />
         </Container>
         <Footer />
