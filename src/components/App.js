@@ -3,26 +3,41 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Container from "./Container";
-import DataReturn from "./DataReturn";
-// import Table from "./Table";
+import api from "../utils/api"
 import "bootstrap/dist/css/bootstrap.min.css";
-// import logo from '/logo.svg';
+import Table from "./Table";
 // import '/App.css';
 
 // create class component to capture data for search function
 class App extends Component {
   state = {
     search: "",
+    results: [],
+
+  };
+
+
+
+  // When this component mounts, search the API for employee
+  componentDidMount() {
+    api.userSearch()
+    
+      .then(res =>  {
+        console.log("resp:", res)
+          this.setState({ results: res.data.results})})
+          
+      .catch(err => console.log(err));
+   
   };
 
   // Filter employee based on search criteria
   filterEmpoyee = (searchkey) => {
-    let empResult = this.state.search.filter((response) => {
-      return response.search === searchkey;
+    let empResult = this.state.results.filter((response) => {
+      return response.name.last.includes(this.state.search);
     });
     console.log("Search Name:", empResult);
     this.setState({
-      search: empResult,
+      results: empResult,
     });
   };
 
@@ -50,12 +65,9 @@ class App extends Component {
         handleInput={this.handleInputChange.bind(this)} 
         handleFormSubmit={this.handleFormSubmit.bind(this)}
         />
-        {/* <p>{this.state.search}</p> */}
         <Container>
-          <DataReturn
-            search={this.state.search}
-            // handleFormSubmit={this.handleFormSubmit.bind(this)}
-            // handleInputChange={this.handleInputChange.bind(this)}
+          <Table
+            response={this.state.results}
           />
         </Container>
         <Footer />
