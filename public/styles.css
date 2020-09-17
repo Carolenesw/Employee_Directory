@@ -50,3 +50,8 @@ footer #main {
   overflow: auto;
   padding-bottom: 150px; /* this needs to be bigger than footer height*/
 }
+
+.emp {
+  border-radius: 3px;
+  font-weight: bold;
+}
