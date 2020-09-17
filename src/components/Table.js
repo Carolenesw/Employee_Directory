@@ -10,7 +10,7 @@ return (
             <th scope="col"><button className="emp" onClick={props.sortByLastName}>Name</button></th>
             <th scope="col"><button className="emp" onClick={props.sortByPhone}>Phone</button></th>
             <th scope="col"><button className="emp" onClick={props.sortByEmail}>Email</button></th>
-            <th scope="col"><button className="emp" onClick={props.sortByAge}>Location</button></th>
+            <th scope="col"><button className="emp" onClick={props.sortByLocation}>Location</button></th>
         </tr>
         </thead>
         <tbody>
