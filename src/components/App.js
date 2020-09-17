@@ -106,11 +106,8 @@ class App extends Component {
             sortByPhone={this.sortByPhone}
             sortByEmail={this.sortByEmail}
             sortByLocation={this.sortByLocation}
-
           />
-          {/* <div>
-            <button className="sortBtn" onClick={this.sortByLastName}>Last Name</button>
-          </div> */}
+         
         </Container>
         <Footer />
       </div>
