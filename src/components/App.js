@@ -17,7 +17,6 @@ class App extends Component {
   };
 
 
-
   // When this component mounts, search the API for employee
   componentDidMount() {
     api.userSearch()
@@ -30,7 +29,7 @@ class App extends Component {
    
   };
 
-  // Filter employee based on search criteria
+  // Filter employee based on search criteria include in the array
   filterEmpoyee = (searchkey) => {
     let empResult = this.state.results.filter((response) => {
       return response.name.last.includes(this.state.search);
@@ -40,6 +39,42 @@ class App extends Component {
       results: empResult,
     });
   };
+
+  // Sort employee based on last name
+  sortByLastName = () => {
+    const sortedEmployees = this.state.results.sort((a, b) => a.name.last.localeCompare(b.name.last))
+    this.setState({
+     results: sortedEmployees,
+    });
+    console.log(this.state.results);
+   }
+
+   // Sort phone number based on last name
+  sortByPhone = () => {
+    const sortedEmployees = this.state.results.sort((a, b) => a.phone.localeCompare(b.phone))
+    this.setState({
+     results: sortedEmployees,
+    });
+    console.log(this.state.results);
+   }
+
+    // Sort phone email address based on last name
+  sortByEmail = () => {
+    const sortedEmployees = this.state.results.sort((a, b) => a.email.localeCompare(b.email))
+    this.setState({
+     results: sortedEmployees,
+    });
+    console.log(this.state.results);
+   }
+
+     // Sort age based on last name
+  sortByLocation = () => {
+    const sortedEmployees = this.state.results.sort((a, b) => a.location.city.localeCompare(b.location.city))
+    this.setState({
+     results: sortedEmployees,
+    });
+    console.log(this.state.results);
+   }
 
   // When the form is submitted, search the API for this.state.search`
   handleFormSubmit(event) {
@@ -68,7 +103,15 @@ class App extends Component {
         <Container>
           <Table
             response={this.state.results}
+            sortByLastName={this.sortByLastName}
+            sortByPhone={this.sortByPhone}
+            sortByEmail={this.sortByEmail}
+            sortByAge={this.sortByAge}
+
           />
+          {/* <div>
+            <button className="sortBtn" onClick={this.sortByLastName}>Last Name</button>
+          </div> */}
         </Container>
         <Footer />
       </div>
