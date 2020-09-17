@@ -105,7 +105,7 @@ class App extends Component {
             sortByLastName={this.sortByLastName}
             sortByPhone={this.sortByPhone}
             sortByEmail={this.sortByEmail}
-            sortByAge={this.sortByAge}
+            sortByLocation={this.sortByLocation}
 
           />
           {/* <div>
