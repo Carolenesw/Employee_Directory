@@ -16,7 +16,6 @@ class App extends Component {
 
   };
 
-
   // When this component mounts, search the API for employee
   componentDidMount() {
     api.userSearch()
@@ -49,7 +48,7 @@ class App extends Component {
     console.log(this.state.results);
    }
 
-   // Sort phone number based on last name
+   // Sort by phone number
   sortByPhone = () => {
     const sortedEmployees = this.state.results.sort((a, b) => a.phone.localeCompare(b.phone))
     this.setState({
@@ -58,7 +57,7 @@ class App extends Component {
     console.log(this.state.results);
    }
 
-    // Sort phone email address based on last name
+    // Sort by email address 
   sortByEmail = () => {
     const sortedEmployees = this.state.results.sort((a, b) => a.email.localeCompare(b.email))
     this.setState({
@@ -67,7 +66,7 @@ class App extends Component {
     console.log(this.state.results);
    }
 
-     // Sort age based on last name
+     // Sort by location
   sortByLocation = () => {
     const sortedEmployees = this.state.results.sort((a, b) => a.location.city.localeCompare(b.location.city))
     this.setState({

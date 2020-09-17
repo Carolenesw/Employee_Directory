@@ -6,11 +6,11 @@ return (
     <table className="table table-striped">
         <thead>
         <tr>
-            <th scope="col">Image</th>
-            <th scope="col"><button onClick={props.sortByLastName}>Name</button></th>
-            <th scope="col"><button onClick={props.sortByPhone}>Phone</button></th>
-            <th scope="col"><button onClick={props.sortByEmail}>Email</button></th>
-            <th scope="col"><button onClick={props.sortByAge}>Location</button></th>
+            <th scope="col"></th>
+            <th scope="col"><button className="emp" onClick={props.sortByLastName}>Name</button></th>
+            <th scope="col"><button className="emp" onClick={props.sortByPhone}>Phone</button></th>
+            <th scope="col"><button className="emp" onClick={props.sortByEmail}>Email</button></th>
+            <th scope="col"><button className="emp" onClick={props.sortByAge}>Location</button></th>
         </tr>
         </thead>
         <tbody>

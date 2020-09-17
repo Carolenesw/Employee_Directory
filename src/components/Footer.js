@@ -5,7 +5,11 @@ function Footer() {
 
   return (
     <footer>
-      <p>Employees Data {currentYear}</p>
+      <div id="wrap">
+        <div id="main" className="container clear-top">
+          <p>Employees Data {currentYear}</p>
+        </div>
+      </div>
     </footer>
   );
 }
